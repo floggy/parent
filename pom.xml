@@ -16,19 +16,20 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.sourceforge.floggy</groupId>
-	<artifactId>floggy</artifactId>
-	<version>1.4.0-SNAPSHOT</version>
-	<name>Floggy Framework's for JME</name>
-	<url>http://floggy.sourceforge.net</url>
-	<description>A collection of frameworks for JME</description>
-	<inceptionYear>2006</inceptionYear>
+	<groupId>org.floggy</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>Floggy Framework for Mobile Development</name>
+	<url>http://www.floggy.org</url>
+	<description>A collection of frameworks for mobile development.</description>
+	<inceptionYear>2006</inceptionYear>
 	<organization>
 		<name>Floggy Open Source Group</name>
-		<url>http://floggy.org/</url>
+		<url>http://www.floggy.org</url>
 	</organization>
 	<licenses>
 		<license>
@@ -38,24 +39,14 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:svn:https://floggy.svn.sourceforge.net/svnroot/floggy/trunk</connection>
-		<developerConnection>scm:svn:https://floggy.svn.sourceforge.net/svnroot/floggy/trunk</developerConnection>
-		<url>http://floggy.svn.sourceforge.net/viewvc/floggy/trunk</url>
+		<connection>scm:git:git://github.com/floggy/parent.git</connection>
+		<developerConnection>scm:git:git@github.com:floggy/parent.git</developerConnection>
+		<url>http://github.com/floggy/parent</url>
 	</scm>
 	<repositories>
 		<repository>
-			<id>pyx4j-web-snapshot</id>
-			<url>http://repository.pyx4j.com/maven2-snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>pyx4j-web-release</id>
-			<url>http://repository.pyx4j.com/maven2-release</url>
+			<id>sonatype-release</id>
+			<url>http://oss.sonatype.org/content/groups/sourceforge</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
@@ -64,19 +55,35 @@
 			</releases>
 		</repository>
 		<repository>
-			<id>floggy</id>
-			<url>http://floggy.sourceforge.net/repository</url>
+			<id>sonatype-snapshot</id>
+			<url>http://oss.sonatype.org/content/repositories/sourceforge-snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
-			<id>floggy</id>
-			<url>http://floggy.sourceforge.net/repository</url>
+			<id>sonatype-plugin-release</id>
+			<url>http://oss.sonatype.org/content/groups/sourceforge</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+		<pluginRepository>
+			<id>sonatype-plugin-snapshot</id>
+			<url>http://oss.sonatype.org/content/repositories/sourceforge-snapshots</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
 			<releases>
-				<enabled>true</enabled>
+				<enabled>false</enabled>
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
@@ -95,14 +102,14 @@
 			<url>scp://shell.sourceforge.net:/home/groups/f/fl/floggy/htdocs/modules/${project.artifactId}/${project.version}</url>
 		</site>
 		<repository>
-			<id>sourceforge</id>
-			<name>SourceForge.net</name>
-			<url>scp://shell.sourceforge.net:/home/groups/f/fl/floggy/htdocs/repository</url>
+			<id>sonatype</id>
+			<name>Sonatype.org</name>
+			<url>http://oss.sonatype.org/content/groups/sourceforge-with-staging</url>
 		</repository>
 		<snapshotRepository>
-			<id>sourceforge</id>
-			<name>SourceForge.net</name>
-			<url>scp://shell.sourceforge.net:/home/groups/f/fl/floggy/htdocs/repository</url>
+			<id>sonatype</id>
+			<name>Sonatype.org</name>
+			<url>http://oss.sonatype.org/content/repositories/sourceforge-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<mailingLists>
@@ -124,44 +131,13 @@
 	<developers>
 		<developer>
 			<name>Thiago Moreira</name>
-			<id>thiagolm</id>
+			<id>tmoreira2020</id>
 			<email>thiago.moreira@floggy.org</email>
 			<organization>Floggy Open Source Group</organization>
 			<roles>
-				<role>Java Developer</role>
-				<role>Release Manager</role>
+				<role>Project Leader</role>
 			</roles>
 			<timezone>-3</timezone>
-		</developer>
-		<developer>
-			<name>Thiago Rossato</name>
-			<id>thiagorossato</id>
-			<email>thiago.rossato@@floggy.org</email>
-			<organization>Floggy Open Source Group</organization>
-			<roles>
-				<role>Java Developer</role>
-			</roles>
-			<timezone>-3</timezone>
-		</developer>
-		<developer>
-			<name>Priscila Tavares Lugon</name>
-			<id>priscilalugon</id>
-			<email>priscila.lugon@@floggy.org</email>
-			<organization>Floggy Open Source Group</organization>
-			<roles>
-				<role>Java Developer</role>
-			</roles>
-			<timezone>-3</timezone>
-		</developer>
-		<developer>
-			<name>Dan Murphy</name>
-			<id>dgem</id>
-			<email>dan.murphy@@floggy.org</email>
-			<organization>Floggy Open Source Group</organization>
-			<roles>
-				<role>Eclipse Developer</role>
-			</roles>
-			<timezone>+0</timezone>
 		</developer>
 	</developers>
 	<build>
@@ -173,9 +149,9 @@
 				<inherited>true</inherited>
 				<dependencies>
 					<dependency>
-						<groupId>net.sourceforge.floggy</groupId>
-						<artifactId>build-tools</artifactId>
-						<version>1.4.0-SNAPSHOT</version>
+						<groupId>org.floggy</groupId>
+						<artifactId>commons</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -200,23 +176,13 @@
 				<inherited>true</inherited>
 				<dependencies>
 					<dependency>
-						<groupId>net.sourceforge.floggy</groupId>
-						<artifactId>build-tools</artifactId>
-						<version>1.4.0-SNAPSHOT</version>
+						<groupId>org.floggy</groupId>
+						<artifactId>commons</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
 					<configLocation>checkstyle-checks-configuration.xml</configLocation>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0.2</version>
-				<inherited>true</inherited>
-				<configuration>
-					<source>1.3</source>
-					<target>1.3</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -244,15 +210,6 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.0-beta-9</version>
-				<inherited>true</inherited>
-				<configuration>
-					<tagBase>https://floggy.svn.sourceforge.net/svnroot/floggy/tags</tagBase>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.4.3</version>
 				<inherited>true</inherited>
@@ -264,9 +221,9 @@
 				<inherited>true</inherited>
 				<dependencies>
 					<dependency>
-						<groupId>net.sourceforge.floggy</groupId>
-						<artifactId>build-tools</artifactId>
-						<version>1.4.0-SNAPSHOT</version>
+						<groupId>org.floggy</groupId>
+						<artifactId>commons</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -281,6 +238,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>2.4</version>
+				<inherited>true</inherited>
 				<configuration>
 					<configLocation>checkstyle-checks-configuration.xml</configLocation>
 				</configuration>
@@ -321,23 +279,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<modules>
-		<module>build-tools</module>
-		<module>floggy-persistence-framework</module>
-		<module>floggy-persistence-framework-impl</module>
-		<module>floggy-persistence-weaver</module>
-		<module>maven-floggy-plugin</module>
-		<module>floggy-persistence-test</module>
-		<module>floggy-persistence-demo</module>
-		<module>barbecue-calculator</module>
-		<module>eclipse-floggy-plugin</module>
-		<module>eclipse-floggy-feature</module>
-		<module>floggy-site-skin</module>
-		<module>floggy-site</module>
-	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<floggy.storepass>f10ggy</floggy.storepass>
-		<microemu.version>3.0.0-SNAPSHOT</microemu.version>
 	</properties>
 </project>

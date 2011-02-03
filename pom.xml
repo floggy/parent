@@ -172,7 +172,6 @@
 					<minmemory>128m</minmemory>
 					<maxmemory>512</maxmemory>
 					<stylesheet>maven</stylesheet>
-					<excludePackageNames>*.internal</excludePackageNames>
 				</configuration>
 			</plugin>
 			<plugin>

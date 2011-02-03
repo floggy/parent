@@ -28,7 +28,7 @@
 	<artifactId>parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Floggy Framework for Mobile Development</name>
+	<name>Floggy Frameworks for Mobile Development</name>
 	<url>http://www.floggy.org</url>
 	<description>A collection of frameworks for mobile development.</description>
 	<inceptionYear>2006</inceptionYear>

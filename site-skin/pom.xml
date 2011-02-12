@@ -21,10 +21,10 @@
 	<parent>
 		<groupId>org.floggy</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>site-skin</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>Floggy's Skin Web Site</name>
 	<description>The skin of the Floggy's web site.</description>
 </project>

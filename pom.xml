@@ -97,8 +97,8 @@
 				<dependencies>
 					<dependency>
 						<groupId>org.floggy</groupId>
-						<artifactId>commons</artifactId>
-						<version>0.0.1-SNAPSHOT</version>
+						<artifactId>build-tools</artifactId>
+						<version>0.0.2-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -123,8 +123,8 @@
 				<dependencies>
 					<dependency>
 						<groupId>org.floggy</groupId>
-						<artifactId>commons</artifactId>
-						<version>0.0.1-SNAPSHOT</version>
+						<artifactId>build-tools</artifactId>
+						<version>0.0.2-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -165,8 +165,8 @@
 				<dependencies>
 					<dependency>
 						<groupId>org.floggy</groupId>
-						<artifactId>commons</artifactId>
-						<version>0.0.1-SNAPSHOT</version>
+						<artifactId>build-tools</artifactId>
+						<version>0.0.2-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -221,6 +221,10 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	<modules>
+		<module>../build-tools</module>
+		<module>../site-skin</module>
+	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

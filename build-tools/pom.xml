@@ -21,10 +21,10 @@
 	<parent>
 		<groupId>org.floggy</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.2</version>
 	</parent>
 	<artifactId>build-tools</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>Floggy's Build Tools</name>
 	<description>Build tools used during the development process.</description>
 </project>
